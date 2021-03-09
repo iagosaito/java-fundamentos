@@ -1,3 +1,5 @@
+package a.capturando_excecoes;
+
 public class FluxoComDuasExcecoesCapturadas {
 
     public static void main(String[] args) {

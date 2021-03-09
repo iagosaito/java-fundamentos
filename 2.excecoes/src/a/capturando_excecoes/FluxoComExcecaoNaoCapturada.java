@@ -1,4 +1,4 @@
-import com.sun.corba.se.pept.transport.ContactInfo;
+package a.capturando_excecoes;
 
 public class FluxoComExcecaoNaoCapturada {
 
