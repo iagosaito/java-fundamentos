@@ -1,4 +1,4 @@
-package com.iagosaito.javafundamentals;
+package com.iagosaito.javafundamentos;
 
 public class Main {
 
