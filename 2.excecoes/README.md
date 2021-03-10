@@ -22,7 +22,24 @@ As exceptions são utilizadas para alterar o fluxo da nossa aplicação e podem 
 
 As exceções no Java dividem-se em dois tipos: 
 - Checked: O desenvolvedor é obrigado a tratar a exceção ou relançá-la. Acontece quando herdamos **diretamente**
-  da classe *Exception*.
-- Unchecked: Não são obrigadaas a tratar e nem relançar. Acontece quando herdamos da classe *RuntimeException*.
+  da classe *Exception*. Exceções desse tipo são verificadas pelo compilador.
+- Unchecked: Não são obrigadaas a tratar e nem relançar. Acontece quando herdamos da classe *RuntimeException*. 
+Exceções desse tipo não são verificadas pelo compilador.
 
 Para mais informações, veja: https://blog.caelum.com.br/lidando-com-exceptions/.
+
+###Finally
+
+Palavra reservada para garantir que um bloco de código seja executado caso uma exceção seja lançada ou não. Muito 
+utilizado para fechar conexões - como banco de dados, por exemplo - em que o fechamento deve ocorrer caso a conexão seja
+estabelecida com sucesso ou não.
+
+
+========================================================================================================
+####Ainda mais sobre Exceções...
+
+ - Throwable é a classe que precisa ser herdade para permitir a utilização da palavra reservada *throw*. Por meio
+dela é possível lançar tanto Exceptions como Errors.
+ - É possível criar uma catch genérico utilizando capturando a classe Exception, 
+   pois todas as classes herdam de Exception.
+   
