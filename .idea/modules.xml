@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/1.jvm-stack/1.jvm-stack.iml" filepath="$PROJECT_DIR$/1.jvm-stack/1.jvm-stack.iml" />
       <module fileurl="file://$PROJECT_DIR$/2.excecoes/2.excecoes.iml" filepath="$PROJECT_DIR$/2.excecoes/2.excecoes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.packages/3.packages.iml" filepath="$PROJECT_DIR$/3.packages/3.packages.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-fundamentos.iml" filepath="$PROJECT_DIR$/java-fundamentos.iml" />
     </modules>
   </component>
