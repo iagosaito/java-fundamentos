@@ -16,7 +16,7 @@ Vamos entender mais a respeito da classe String....
 - Strings possuem sintaxe especial chamada Object Literal, isso traz a possibilidade de criar objetos sem utilizar o 
 operador *new*.
 - Strings são conjuntos de chars. A própria classe String implementa a interface *CharSequence*.
-- A classe *StringBuilder* também implementa a interface *CharSequence*, porém cria String mutáveis. Então, seu uso é
+- A classe *StringBuilder* também implementa a interface *CharSequence*, porém cria String mutáveis. Então, o uso é
 recomendado caso você precise concatenar várias Strings.
   
 Doc oficial da classe String: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html
