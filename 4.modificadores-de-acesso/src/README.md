@@ -13,7 +13,7 @@ Vamos analisar as características dos 4 modificadores de acesso.
 ### Protected
 
 - São visíveis na classe que foram declarados e nas sub-classes, ou seja, em todas as classes que herdam a classe 
-principal em que forem declaradas.
+principal. Atributos do tipo protected também são visíveis a todas as classes do mesmo pacote.
 - Podem ser utilizados em atributos, métodos e construtores, mas NÃO existem classes protected.
 
 
