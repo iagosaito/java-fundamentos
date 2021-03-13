@@ -20,3 +20,27 @@ operador *new*.
 recomendado caso você precise concatenar várias Strings.
   
 Doc oficial da classe String: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html
+
+### Destrinchando o System.out.println()
+
+Podemos inferir várias coisas a respeito do método System.out.println. Para começar, podemos dizer de cara que System é 
+uma classe public, pois começa com letra maiúscula e podemos utilizá-la em nosso pacote. 
+
+Agora vamos os System.out... Bem, podemos dizer que o *out* não é uma classe, pois começa com letra minúscula. Também
+podemos dizer que não é um método, pois não estava chamando *out()*. 
+
+Então, por eliminação, sabemos que *out* é um atributo da classe *System. Ok, mas um atributo de qual tipo? int? String?
+long?
+
+Vamos pensar um pouco...
+
+Depois do *out* temos uma chamada ao método *println*. Opa! Para chamar um método precisamos de um objeto. Então, o 
+*out* é um atributo de referência a um objeto, e como não precisamos do operador *new*, sabemos que é um atributo 
+estático.
+
+### Object
+
+- Todas as classes em Java herdam da classe Object no Java, mesmo que você não faça isso diretamente.
+- Podemos utilizar de polimorfismo para criar um objeto qualquer utilizando a classe Object como tipo da variável de 
+referência.
+- A classe Object possui métodos como toString(), hashCode() e equals().

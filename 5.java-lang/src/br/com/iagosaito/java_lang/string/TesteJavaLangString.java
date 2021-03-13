@@ -1,10 +1,10 @@
-package br.com.iagosaito.java_lang;
+package br.com.iagosaito.java_lang.string;
 
 /*
     As classes do pacote java.lang são especiais porque são as únicas que não precisam ser importadas.
     String e System são exemplos de classes que fazem parte do pacote lang
  */
-public class TesteJavaLang {
+public class TesteJavaLangString {
 
     public static void main(String[] args) {
 
