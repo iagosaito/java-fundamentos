@@ -20,7 +20,7 @@ O retorno que nós temos é:
 
     class [I
 
-**"[I"** equivale a uma assinatura de objeto Class "predefinida" na JVM. Não existem arquivos .class correspondentes. 
+**"[I"** equivale a uma assinatura de objeto da classe *Class* "predefinida" na JVM. Não existem arquivos .class correspondentes. 
 Todo Array estende a classe Object e implementa internamente as interfaces Clonable e Serializable.
 
 Links para referências:
@@ -28,3 +28,10 @@ Links para referências:
 - https://www.geeksforgeeks.org/arrays-in-java/
 - https://docs.oracle.com/javase/specs/jls/se8/html/jls-10.html#jls-10.8
 - https://stackoverflow.com/questions/8546500/why-isnt-there-a-java-lang-array-class-if-a-java-array-is-an-object-shouldnt
+
+Além dos tipos primitivos, os Arrays também podem armazenar referências de objetos, por exemplo:
+
+    Clube[] clubes = new Clube[4]
+
+Nesse caso, cada posição do Array é inicializada com o valor default *null*. Caso um objeto do tipo Clube seja 
+inicializado e inserido no Array, sua referência ficará armazenada.

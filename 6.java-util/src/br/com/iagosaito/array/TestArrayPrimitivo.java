@@ -1,6 +1,6 @@
 package br.com.iagosaito.array;
 
-public class TestArray {
+public class TestArrayPrimitivo {
 
     public static void main(String[] args) {
 
