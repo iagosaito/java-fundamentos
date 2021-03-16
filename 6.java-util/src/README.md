@@ -72,3 +72,9 @@ Para saber se vai ser preciso fazer um Cast, sempre pense na seguinte regra...
 
 Se o elemento depois do sinal de atribuição *=* for mais genérico que o da esquerda, o Cast será obrigatório. Caso 
 contrário, não.
+
+## E o tal do *public static void main(String[] args)?*
+
+Sabemos que *String[]* representa um Array de Strings. Esse Array de String no método Main da aplicação java representam
+nada mais do que parâmetro - popularmente conhecidos como *flags* - muito utilizados para habilitar ou desabilitar 
+funcionalidades específicas dentro da sua aplicação.
