@@ -78,3 +78,25 @@ contrário, não.
 Sabemos que *String[]* representa um Array de Strings. Esse Array de String no método Main da aplicação java representam
 nada mais do que parâmetro - popularmente conhecidos como *flags* - muito utilizados para habilitar ou desabilitar 
 funcionalidades específicas dentro da sua aplicação.
+
+|---------------------------------------------------------------------------------------------------------------------|
+## ArrayList
+
+Array List é uma estrutura de dados que possui um Array por debaixo dos panos.
+
+A vantagem de um ArrayList é que ele possui métodos pré-definidos para manipulação, além disso,
+utiliza de Generics.
+
+Então podemos "tipar" o Array, por exemplo:
+    
+    ArrayList<Conta> contas = new ArrayList<Contas>();
+
+Agora o nosso ArrayList só vai aceitar a inserção de referências do tipo Contas.
+
+Big O Notation para Arrays:
+
+    get() -> O(1)
+    remove() -> O(n)
+    add() -> O(1)
+    add(int index, e element) -> O(n)
+    contains() -> O(n)
