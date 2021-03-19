@@ -24,5 +24,14 @@ public class TesteArrayList {
             System.out.println(s);
         }
 
+        System.out.println("\nRemovendo index 0...");
+        strings.remove(0);
+
+        System.out.println("Indice 0: " + strings.get(0));
+
+        for (String s : strings) {
+            System.out.println(s);
+        }
+
     }
 }

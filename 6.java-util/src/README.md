@@ -100,3 +100,19 @@ Big O Notation para Arrays:
     add() -> O(1)
     add(int index, e element) -> O(n)
     contains() -> O(n)
+
+Toda vez que removermos um elemento do Array, vai ser preciso mover todos a frente para a esquerda.
+
+OBS: Quando utilizamos o método contains(), ele executa o método equals() para cada objeto do ArrayList. 
+
+## Equals
+
+Quando não definimos condições para definir se um objeto é igual ou outro, por padrão ele compara apenas as
+referências dos dois objetos. 
+
+Quando não damos @Override no método equals() utilizamos a implementação dentro da classe Object.
+Esta implementação apenas compara as referências.
+
+Quando queremos comparar realmente o conteúdo dos objetos, devemos sobreescrever o método equals e inserir dentro dele 
+as condições de comparação de um objeto e outro. Assim a comparação será feita com base nas comparações e não nas 
+referências.
