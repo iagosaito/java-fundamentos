@@ -131,3 +131,8 @@ Big O Notation para LinkedList:
     remove() -> O(1)
     get() -> O(N)
     contains() -> O(N)
+
+### Vector...
+
+Além do ArrayList e do LinkedList e classe Vector é uma outra implementação da interface List. Sua implementação é muito
+similar a do ArrayList, a única diferença é que ela foi criada para trabalhar com programação concorrente. 
