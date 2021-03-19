@@ -116,3 +116,18 @@ Esta implementação apenas compara as referências.
 Quando queremos comparar realmente o conteúdo dos objetos, devemos sobreescrever o método equals e inserir dentro dele 
 as condições de comparação de um objeto e outro. Assim a comparação será feita com base nas comparações e não nas 
 referências.
+
+## Linked List
+
+Estrutura de dados que não possuem um Array por debaixo dos panos.
+
+Uma LinkedList utiliza uma Lista Duplamente Encadeada, ou seja, cada elemento possui uma referência para o próximo 
+elemento e para o elemento anterior. 
+
+Big O Notation para LinkedList:
+
+    add() -> O(1)
+    add() -> O(N) OBS: Porém, podemos considerar N/2 visto que pode partir tanto do fim como do começo.
+    remove() -> O(1)
+    get() -> O(N)
+    contains() -> O(N)
