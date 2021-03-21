@@ -132,7 +132,16 @@ Big O Notation para LinkedList:
     get() -> O(N)
     contains() -> O(N)
 
-### Vector...
+## Vector
 
 Além do ArrayList e do LinkedList e classe Vector é uma outra implementação da interface List. Sua implementação é muito
-similar a do ArrayList, a única diferença é que ela foi criada para trabalhar com programação concorrente. 
+similar a do ArrayList, a única diferença é que ela foi criada para trabalhar com programação concorrente.
+
+## Collections
+
+Interface mãe de todas as coleções. Divido em dois tipos: Set e List
+
+List -> Interface que define Listas, ou seja, possuem acesso a algum índice e aceitam valores repetidos.
+Set -> Interface que define Conjuntos, ou seja, não aceitam valores repetidos e não possuem acesso a elementos através
+de índices.
+
