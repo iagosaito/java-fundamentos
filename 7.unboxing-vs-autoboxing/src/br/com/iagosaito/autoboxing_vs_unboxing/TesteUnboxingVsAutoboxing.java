@@ -15,5 +15,16 @@ public class TesteUnboxingVsAutoboxing {
 
         // Unboxing
         int i4 = i3;
+
+        // Internamente atua da seguinte maneira...
+        int i5 = i3.intValue();
+
+        String s = "12";
+
+        // parseInt() retorna um primitivo
+        int i6 = Integer.parseInt(s);
+
+        // valueOf() retornar um objeto
+        Integer i7 = Integer.valueOf(s);
     }
 }

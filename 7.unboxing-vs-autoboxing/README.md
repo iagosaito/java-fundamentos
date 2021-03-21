@@ -39,3 +39,16 @@ Exemplo:
     int num = i;
 
 Neste caso a variável de referência i foi convertida automaticamente para a variável primitiva num.
+
+Podemos destacar outros métodos dentro da classe Integer:
+
+    String s = "10";
+
+    int i = Integer.parseInt(s);
+    Integer int = Integer.valueOf(s);
+
+Os métodos *parseInt()* e *valueOf()* recebem uma String e convertem para um *int* e um *Integer*, respectivamente.
+
+## Number
+
+Classe mãe de todas as classes Wrapper numéricas.
