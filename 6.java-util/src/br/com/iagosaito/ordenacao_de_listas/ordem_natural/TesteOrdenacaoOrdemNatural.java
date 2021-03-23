@@ -43,5 +43,12 @@ public class TesteOrdenacaoOrdemNatural {
             System.out.println(clube);
         }
 
+        System.out.println("--------------------");
+        System.out.println("Rotacionando...");
+
+        Collections.rotate(clubes, 1);
+        for (Clube clube : clubes) {
+            System.out.println(clube);
+        }
     }
 }
