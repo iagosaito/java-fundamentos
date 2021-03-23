@@ -154,3 +154,9 @@ que você deve estabelecer o seu critério de comparação.
 
 Sendo assim, se com base no seu critério, o *o1* é maior que o *o2*, você deve retornar um valor positivo. 
 Se *o2* for maior que *o1*, retorne um valor negativo. Se forem iguais, retorne 0. 
+
+### Ordem Natural
+
+A Ordem Natural é uma ordem definida na própria classe. Podemos utilizar a própria ordem natural para ordenar coleções.
+Para isso sua classe deve implementar a *interface Comparable< T >*, que possui o método *compareTo()*. Justamente esse 
+método que fará com que possamos criar uma ordem natural com base no nosso critério de comparação.

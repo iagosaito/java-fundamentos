@@ -23,6 +23,7 @@ public class TesteOrdenacaoDeListas {
         }
 
         System.out.println("----------------------");
+        System.out.println("Ordenado por Valor de Mercado");
         ClasseComparadoraDeJogador comparadorPorvalor = new ClasseComparadoraDeJogador();
 
         jogadores.sort(comparadorPorvalor);
@@ -32,6 +33,7 @@ public class TesteOrdenacaoDeListas {
         }
 
         System.out.println("----------------------");
+        System.out.println("Ordenado Inversamente por Valor de Mercado");
 
         jogadores.sort(comparadorPorvalor.reversed());
 
@@ -59,14 +61,16 @@ class ClasseComparadoraDeJogador implements Comparator<Jogador> {
     @Override
     public int compare(Jogador j1, Jogador j2) {
 
-        if (j1.getValorDeMercado() < j2.getValorDeMercado()) {
-            return -1;
-        }
+//        if (j1.getValorDeMercado() < j2.getValorDeMercado()) {
+//            return -1;
+//        }
+//
+//        if (j1.getValorDeMercado() > j2.getValorDeMercado()) {
+//            return 1;
+//        }
+//
+//        return 0;
 
-        if (j1.getValorDeMercado() > j2.getValorDeMercado()) {
-            return 1;
-        }
-
-        return 0;
+        return Double.compare(j1.getValorDeMercado(), j2.getValorDeMercado());
     }
 }
