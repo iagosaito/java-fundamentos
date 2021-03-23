@@ -63,8 +63,9 @@ poderíamos simplificar o código e executá-lo da seguinte maneira:
 
 
     public static void someFunction(Runnable r){
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i < 10; i++) {
             r.facaAlgo();
+        }
     }
 
     ...
@@ -85,3 +86,20 @@ possível.
 Na realidade *o Java cria uma classe anônima* para representar a implementação da interface Runnable e assim executar o 
 código. Note que no exemplo acima não precisamos mais da classe PrintHello, visto que estamos utilizando uma classe 
 anônima criada pelo próprio Java.
+
+## Lambdas
+
+Veja como podemos simplificar a abordagem anterior usando lambdas:
+
+    public static void someFunction(Runnable r){
+        for(int i = 0; i < 10; i++) {
+            r.facaAlgo();
+        }
+    }
+
+    ...
+    public static void main {
+    ...
+        someFunction(() -> System.out.println("Printando algo por meio de uma classe anônima"));
+    ...
+    }

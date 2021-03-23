@@ -5,7 +5,7 @@ public class TesteClassesAnonimas {
     /*
         Em vez de criar uma classe para servir como Function Object, podemos utilizar classes anônimas.
 
-        Ao dar new InterfaceParaPrintarAlgo() pode parecer que estamos instanciando uma interface, mas, na realidade
+        Ao dar new InterfaceParaPrintarAlgo() pode parecer que estamos instanciando uma interface, mas, na realidade,
         o Java cria uma classe(daí que vem o nome) anônima que representa a implementação dessa interface.
 
         Embora isso nos ajude a enxugar o código, a leitura é altamente prejudicada.
