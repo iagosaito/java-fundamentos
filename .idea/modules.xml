@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/6.java-util/6.java-util.iml" filepath="$PROJECT_DIR$/6.java-util/6.java-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/7.unboxing-vs-autoboxing/7.unboxing-vs-autoboxing.iml" filepath="$PROJECT_DIR$/7.unboxing-vs-autoboxing/7.unboxing-vs-autoboxing.iml" />
       <module fileurl="file://$PROJECT_DIR$/8.lambda-e-classes-anonimas/8.lambda-e-classes-anonimas.iml" filepath="$PROJECT_DIR$/8.lambda-e-classes-anonimas/8.lambda-e-classes-anonimas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/9.java.io/9.java.io.iml" filepath="$PROJECT_DIR$/9.java.io/9.java.io.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-fundamentos.iml" filepath="$PROJECT_DIR$/java-fundamentos.iml" />
     </modules>
   </component>
