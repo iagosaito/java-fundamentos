@@ -28,7 +28,7 @@ Exceções desse tipo não são verificadas pelo compilador.
 
 Para mais informações, veja: https://blog.caelum.com.br/lidando-com-exceptions/.
 
-###Finally
+### Finally
 
 Palavra reservada para garantir que um bloco de código seja executado caso uma exceção seja lançada ou não. Muito 
 utilizado para fechar conexões - como banco de dados, por exemplo - em que o fechamento deve ocorrer caso a conexão seja
@@ -42,7 +42,7 @@ Ao utilizar o try-with-resources, é obrigatório implementar na classe de inst�
 Quando utilizamos try-with-resources automaticamente um bloco *finally* será criado.
 
 ========================================================================================================
-####Ainda mais sobre Exceções...
+#### Ainda mais sobre Exceções...
 
  - Throwable é a classe que precisa ser herdade para permitir a utilização da palavra reservada *throw*. Por meio
 dela é possível lançar tanto Exceptions como Errors.
