@@ -1,6 +1,6 @@
 package br.com.iagosaito;
 
-public class TesteOrdenacaoClassesAnonimas {
+public class TesteFunctionObjects {
 
     /*
         A classe PrintarAlgo atua como um Function Object. Uma classe utilizada apenas para encapsular
