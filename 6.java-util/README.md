@@ -145,3 +145,12 @@ List -> Interface que define Listas, ou seja, possuem acesso a algum índice e a
 Set -> Interface que define Conjuntos, ou seja, não aceitam valores repetidos e não possuem acesso a elementos através
 de índices.
 
+## Como ordenar Listas?
+
+Para ordenar uma lista precisamos implementar a *interface* *Comparator*.
+
+A *interface Comparator* disponibiliza um método chamado *Compare* que recebe dois parâmetros: o1 e o2. É neste método 
+que você deve estabelecer o seu critério de comparação. 
+
+Sendo assim, se com base no seu critério, o *o1* é maior que o *o2*, você deve retornar um valor positivo. 
+Se *o2* for maior que *o1*, retorne um valor negativo. Se forem iguais, retorne 0. 
