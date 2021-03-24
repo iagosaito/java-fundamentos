@@ -50,3 +50,15 @@ O exemplo a seguir demonstra como podemos escrever um arquivo .txt com Java.
 #### BufferedWriter -> Escrever caracteres a partir de um fluxo de caracteres.
 
 Veja que muito similar a leitura de arquivos. Tudo que é *Input* vira *Output*. Tudo que é *Reader* vira *Writer*. 
+
+## System.in e System.out
+
+Não é apenas em arquivos que temos entrada e saída de dados. 
+
+*System.In e System.Out* são métodos estáticos que criam uma instância de InputStream e OutputStream, respectivamente. 
+
+O System.In vai criar uma InputStrem que ficará escutando as entradas do teclado, e o OutputStream, por sua vez, lança
+um fluxo de dados de saída no console. 
+
+
+

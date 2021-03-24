@@ -1,4 +1,4 @@
-package br.com.iagosaito.javaio;
+package br.com.iagosaito.javaio.arquivos;
 
 import java.io.*;
 
@@ -15,5 +15,7 @@ public class TesteSaidaDeDados {
         bufferedWriter.write("E esta também!!");
 
         bufferedWriter.close();
+
     }
+
 }
