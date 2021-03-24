@@ -1,4 +1,4 @@
-package br.com.iagosaito.a.entrada_de_dados;
+package br.com.iagosaito.javaio;
 
 import java.io.*;
 
@@ -22,5 +22,6 @@ public class TesteEntradaDeDados {
             line = bufferedReader.readLine();
         }
 
+        bufferedReader.close();
     }
 }
