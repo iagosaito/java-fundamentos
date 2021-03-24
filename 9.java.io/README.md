@@ -25,7 +25,7 @@ O exemplo a seguir demonstra como podemos ler um arquivo .txt com Java.
         }
 
 #### FileInputStream -> Cria um fluxo para entrada de dados de um arquivo.
-#### InputStream -> Ponte para transformar um fluxo de bytes para fluxo de caracteres.
+#### InputStreamReader -> Ponte para transformar um fluxo de bytes para fluxo de caracteres.
 #### BufferedReader -> Lê caracteres a partir de um fluxo de caracteres.
 
 ## Saída (Output)
@@ -44,5 +44,9 @@ O exemplo a seguir demonstra como podemos escrever um arquivo .txt com Java.
     bufferedWriter.write("E esta também!!");
 
     bufferedWriter.close();
+
+#### FileOutputStream -> Cria um fluxo para saída de dados binários de um arquivo.
+#### OutputStreamWriter -> Ponte para transformar um fluxo de caracteres num Fluxo de Bytes.
+#### BufferedWriter -> Escrever caracteres a partir de um fluxo de caracteres.
 
 Veja que muito similar a leitura de arquivos. Tudo que é *Input* vira *Output*. Tudo que é *Reader* vira *Writer*. 
