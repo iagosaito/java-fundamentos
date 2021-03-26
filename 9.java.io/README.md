@@ -60,5 +60,14 @@ Não é apenas em arquivos que temos entrada e saída de dados.
 O System.In vai criar uma InputStrem que ficará escutando as entradas do teclado, e o OutputStream, por sua vez, lança
 um fluxo de dados de saída no console. 
 
+## FileWriter
+
+Classe de mais alto nível para escrita em arquivos. Podemos substituir o *FileOutputStream* e o *OutputStreamWriter*
+pelo *FileWriter*. 
+
+https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/FileWriter.html
+
+
+
 
 
