@@ -28,6 +28,16 @@ O exemplo a seguir demonstra como podemos ler um arquivo .txt com Java.
 #### InputStreamReader -> Ponte para transformar um fluxo de bytes para fluxo de caracteres.
 #### BufferedReader -> Lê caracteres a partir de um fluxo de caracteres.
 
+### Scanner
+
+A classe Scanner é uma classe de alto nível para tratar entrada de dados na aplicação. Diferentes dos Streams e Readers, 
+a classe Scanner pertence ao pacote *java.util*.
+
+A classes Scanner possui métodos de alto nível como *nextLine()* que nos permitem ler uma linha em arquivo .csv, por
+exemplo, além de realizar o parseamento desse linha a partir de um delimitador, separando cada item do arquivo .csv.
+
+https://docs.oracle.com/javase/10/docs/api/java/util/Scanner.html
+
 ## Saída (Output)
 
 Da mesma maneira que podemos receber um fluxo de dados das mais variadas fontes, nós também podemos criar fluxos de

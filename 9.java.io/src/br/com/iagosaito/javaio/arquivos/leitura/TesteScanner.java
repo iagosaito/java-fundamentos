@@ -10,7 +10,16 @@ public class TesteScanner {
         Scanner scanner = new Scanner(new File("jogadores.csv"));
 
         while (scanner.hasNextLine()) {
-            System.out.println(scanner.nextLine());
+
+            String line = scanner.nextLine();
+            System.out.println(line);
+            Scanner lineScanner = new Scanner(line);
+            lineScanner.useDelimiter(",");
+
+            while (lineScanner.hasNext()) {
+                System.out.println(lineScanner.next().trim());
+            }
+
         }
     }
 }
