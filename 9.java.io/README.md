@@ -65,8 +65,21 @@ um fluxo de dados de saída no console.
 Classe de mais alto nível para escrita em arquivos. Podemos substituir o *FileOutputStream* e o *OutputStreamWriter*
 pelo *FileWriter*. 
 
+A classe FileWriter estende a classe OutputStreamWriter, que por sua vez estende a classe Writer. 
+Então o FileWriter é um OutputStreamWriter e é um Writer.
+
 https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/FileWriter.html
 
+## PrintWriter / PrintStream
+
+Classe de nível mais alto que o FileWriter que estabelece com um fluxo binário para escrita em arquivos, por exemplo.
+
+A classe PrintStream foi a primeira classe criada no Java 1.0 para criar um fluxo de dados de saída, a partir do Java
+1.1 vieram os outros fluxos. A classe PrintWriter é apenas uma cópia da classe PrintStream que estende a classe mãe
+Writer.
+
+https://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html
+https://docs.oracle.com/javase/7/docs/api/java/io/PrintStream.html
 
 
 
