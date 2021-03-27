@@ -81,6 +81,13 @@ Writer.
 https://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html
 https://docs.oracle.com/javase/7/docs/api/java/io/PrintStream.html
 
+## CurrentTimeMillis
+
+Método estático especial dentro da classe System que representa a quantidade de milissegundos que se passaram desde 1 de
+Janeiro de 1970 até agora. 
+
+Extremamente útil para medir o tempo de execução de determinado algoritmo.
+
 
 
 
