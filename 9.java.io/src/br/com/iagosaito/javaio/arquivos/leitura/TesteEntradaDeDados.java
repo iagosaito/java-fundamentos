@@ -1,4 +1,4 @@
-package br.com.iagosaito.javaio.arquivos;
+package br.com.iagosaito.javaio.arquivos.leitura;
 
 import java.io.*;
 

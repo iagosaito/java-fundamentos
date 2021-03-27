@@ -1,4 +1,4 @@
-package br.com.iagosaito.javaio.arquivos;
+package br.com.iagosaito.javaio.arquivos.escrita;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
