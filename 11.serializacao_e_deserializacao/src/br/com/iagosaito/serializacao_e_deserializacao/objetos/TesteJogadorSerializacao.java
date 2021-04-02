@@ -1,4 +1,4 @@
-package br.com.iagosaito.serializacao_e_deserializacao;
+package br.com.iagosaito.serializacao_e_deserializacao.objetos;
 
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;

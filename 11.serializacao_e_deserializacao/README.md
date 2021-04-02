@@ -49,4 +49,17 @@ A solução nesse caso é escrever o atributo na classe:
 Dessa forma nós controlamos se a classe é compatível ou não para deserialização. Se as alterações mantiverem a classe
 compatível, mantemos o número, caso contrário, alteramos manualmente. 
 
+### Herança e Composição
+
+Quando lidamos com Composição é preciso implementar a interface *Serializable* na que desejamos serializar e todas as
+agregações presentes na classe. 
+
+Caso não queiramos serializar alguma agregação podemos utilizar a palavra reservada *transient*.
+
+    private transient Clube clube;
+
+Dessa forma o objeto clube será ignorado na serialização e na deserialização.
+
+No caso da herança, basta implementar a interface na classe mãe e todas as outras já serão consideradas "serializáveis".
+
 https://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html
