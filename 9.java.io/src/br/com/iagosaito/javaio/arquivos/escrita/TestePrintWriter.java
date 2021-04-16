@@ -2,6 +2,7 @@ package br.com.iagosaito.javaio.arquivos.escrita;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
 
 public class TestePrintWriter {
 
@@ -15,5 +16,6 @@ public class TestePrintWriter {
 
 
         printWriter.close();
+
     }
 }
