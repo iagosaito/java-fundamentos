@@ -1,4 +1,4 @@
-package br.com.iagosaito.java8.default_methods;
+package br.com.iagosaito.java8.default_and_static_methods;
 
 public interface Jogador {
 

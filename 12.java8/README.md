@@ -15,3 +15,21 @@ methods* em uma interface.
 
 https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html
 https://www.baeldung.com/java-static-default-methods
+
+### Lambda
+
+Sintaxe especial que fornece uma implementação a interfaces funcionais.
+
+    jogadores.sort(new Comparator<String>() {
+    @Override
+    public int compare(String s1, String s2) {
+        return Integer.compare(s1.length(), s2.length());
+        }
+    });
+
+Em vez de criar uma função anônima como definido anteriormente, podemos substituir isso por funções lambda.
+
+    jogadores.sort((s1, s2) -> Integer.compare(s1.length(), s2.length()));
+
+As classes anônimas e as funções lambda são compiladas de uma forma diferente dentro da memória do Java, mas de forma
+prática, podemos substiuir a implementação sem problemas.
