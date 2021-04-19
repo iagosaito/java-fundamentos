@@ -33,3 +33,6 @@ Em vez de criar uma função anônima como definido anteriormente, podemos subst
 
 As classes anônimas e as funções lambda são compiladas de uma forma diferente dentro da memória do Java, mas de forma
 prática, podemos substiuir a implementação sem problemas.
+
+https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html
+https://www.baeldung.com/java-method-references.com
