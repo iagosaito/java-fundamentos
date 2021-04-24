@@ -15,11 +15,6 @@ public class TratadorDeRequisicoes {
                 .getConstrutorPadrao()
                 .invocar();
 
-//        final Class<?> controllerClass = Class.forName(PACOTE_BASE + "." + request.getRecurso() + "Controller");
-//        final Constructor<?> constructorController = controllerClass.getConstructor();
-//
-//        final Object controller = constructorController.newInstance();
-
         System.out.println(controller instanceof PessoaController);
     }
 }
