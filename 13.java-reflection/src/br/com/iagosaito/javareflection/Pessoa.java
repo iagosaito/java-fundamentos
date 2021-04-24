@@ -9,6 +9,10 @@ public class Pessoa {
 
     public Pessoa() {}
 
+    private Pessoa(String nome) {
+        this.nome = nome;
+    }
+
     private String nome;
     private int idade;
 
