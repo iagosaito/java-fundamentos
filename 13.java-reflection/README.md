@@ -28,3 +28,5 @@ públicos da classe.
 
 A diferença entre os métodos *declared* é que por meio deles temos acessos aos construtores privados da classe. Mas
 CUIDADO: Para que os métodos privados sejam acessíveis, primeiro é preciso alterar a acessibilidade da classe.
+
+https://docs.oracle.com/javase/10/docs/api/java/lang/reflect/Constructor.html

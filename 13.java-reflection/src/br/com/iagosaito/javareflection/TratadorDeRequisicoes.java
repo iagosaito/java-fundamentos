@@ -1,16 +1,24 @@
 package br.com.iagosaito.javareflection;
 
+import java.lang.reflect.InvocationTargetException;
+
 public class TratadorDeRequisicoes {
 
     private static final String PACOTE_BASE = "br.com.iagosaito.javareflection";
 
-    static void executa(final String url) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
+    static void executa(final String url) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
 
-        final String[] recursoMaisMetodo = url.substring(1).split("/");
-        final String recurso = Character.toUpperCase(recursoMaisMetodo[0].charAt(0)) + recursoMaisMetodo[0].substring(1);
+        Request request = new Request(url);
 
-        final Class<?> controllerClass = Class.forName(PACOTE_BASE + "." + recurso + "Controller");
-        final Object controller = controllerClass.newInstance();
+        final Object controller = new Reflexao()
+                .refletirClasse(PACOTE_BASE, request.getRecurso())
+                .getConstrutorPadrao()
+                .invocar();
+
+//        final Class<?> controllerClass = Class.forName(PACOTE_BASE + "." + request.getRecurso() + "Controller");
+//        final Constructor<?> constructorController = controllerClass.getConstructor();
+//
+//        final Object controller = constructorController.newInstance();
 
         System.out.println(controller instanceof PessoaController);
     }
