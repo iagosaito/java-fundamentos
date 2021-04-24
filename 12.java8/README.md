@@ -52,3 +52,8 @@ Podemos classificar as operações dentro de um pipeline(canalização) em dois 
 
 https://www.geeksforgeeks.org/stream-in-java/#:~:text=A%20stream%20is%20a%20sequence,Arrays%20or%20I%2FO%20channels.
 https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html
+
+OBS: Link para classe estática Collectors
+https://medium.com/@racc.costa/collectors-no-java-8-e-no-java-9-6a3ba8f3f42f
+https://www.baeldung.com/java-8-collectors
+https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/stream/Collectors.html
