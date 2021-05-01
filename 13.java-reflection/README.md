@@ -30,3 +30,10 @@ A diferença entre os métodos *declared* é que por meio deles temos acessos ao
 CUIDADO: Para que os métodos privados sejam acessíveis, primeiro é preciso alterar a acessibilidade da classe.
 
 https://docs.oracle.com/javase/10/docs/api/java/lang/reflect/Constructor.html
+
+## Anotações
+
+Anotações são metadados. Metadados nada mais são do que dados sobre os dados. Por exemplo, vamos supor que o valor de um
+atributo sobre uma pessoa é 80. Sabemos que o número 80 se referem ao peso e que sua unidade de medida é quilograma. 
+Então, peso e quilograma são dados sobre os dado (80).
+
