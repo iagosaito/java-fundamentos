@@ -9,7 +9,7 @@ Existem tem maneira de criamos um instância de um objeto Class<?>: *.class, get
     2 -> Pessoa pessoa2 = new Pessoa("Messi", 30);
          Class<? extends Pessoa> jogadorClass2 = pessoa2.getClass();
 
-    3 -> Class<?> pessoaClasse3 = Class.forName("br.com.iagosaito.javareflection.Pessoa");
+    3 -> Class<?> pessoaClasse3 = Class.forName("Pessoa");
 
 Depois que temos o nosso objeto *Class<?>* podemos criar uma instância de um objeto de uma maneira: 
 
