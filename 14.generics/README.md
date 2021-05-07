@@ -9,7 +9,7 @@
 
 Um *Generic Type* é uma classe ou interface que é parametrizada por tipos. Por exemplo:
     
-    public class Box<T1, T2, ..., Tn>
+    public class br.com.iagosaito.generics.Box<T1, T2, ..., Tn>
 
 Os tipos definidos dentro dos <> são chamadas de Type Parameters(Variable).
 As *Type Variable* podem ser de qualquer tipo desde que não sejam não-primitivo.
