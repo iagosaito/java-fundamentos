@@ -26,6 +26,16 @@ Os nomes de *Types Variables* mais utilizadas são:
 - V - Value
 - S,U,V - Segundo, Terceiro ou Quarto tipos
 
+### Instanciando um tipo genérico
+
+Para instanciar um tipo genérico fazemos da seguinte maneira:
+
+    Box<Integer> integerBox = new Box<Integer>();
+
+Sendo *Integer* o *type parameter* da classe Box. Podemos também criar uma classe com multiplos *type parameters*, ex:
+
+    Pair<String, Integer> p1 = new OrderedPair<String, Integer>("Even", 8);
+
 Referencias...
 
 https://docs.oracle.com/javase/tutorial/java/generics/index.html
