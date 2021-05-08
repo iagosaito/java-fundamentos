@@ -36,6 +36,18 @@ Sendo *Integer* o *type parameter* da classe Box. Podemos também criar uma clas
 
     Pair<String, Integer> p1 = new OrderedPair<String, Integer>("Even", 8);
 
+### Raw Types
+
+Raw Types é uma classe Generica que tem o seu *Type Argument* omitido, ex:
+
+    Box rawBox = new Box();
+
+Nesse caso, é inferido que você possui um Box que te retornar Object. O problema da utilização de Raw Types é que é 
+impossível realizar checkagem de tipo usando raw types em tempo de compilação, apenas em tempo de execução.
+
+### Métodos Genéricos
+
+
 Referencias...
 
 https://docs.oracle.com/javase/tutorial/java/generics/index.html
