@@ -16,4 +16,8 @@ public class Box<T> {
         System.out.println("T: " + t.getClass().getName());
         System.out.println("U: " + u.getClass().getName());
     }
+
+    public void boxTest(Box<Number> integerBox) {
+        System.out.println(integerBox.getClass().getName());
+    }
 }
