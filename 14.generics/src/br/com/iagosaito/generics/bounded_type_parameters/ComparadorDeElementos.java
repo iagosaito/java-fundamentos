@@ -6,6 +6,7 @@ public class ComparadorDeElementos {
 
     /*
         // Código não compila, pois n é possível comparar com > um tipo E
+
         public static <E> boolean contaMaioresQue(E[] arrayElementos, E elemento) {
             return Arrays.stream(arrayElementos).anyMatch(e -> e > elemento);
         }
