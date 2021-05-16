@@ -9,5 +9,6 @@ public class Exercicio4 {
         O compilador Java impõe verificações de tipo mais rígidas no código genérico no momento da compilação.
         Os genéricos suportam tipos como parâmetros.
         Os genéricos permitem que você implemente algoritmos genéricos.
+
      */
 }
