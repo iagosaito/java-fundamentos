@@ -3,21 +3,26 @@ package br.com.iagosaito.threads;
 public class TesteSincronismoEntreThreads {
 
     /*
-        O problema aqui é que João e Maria estão entrando no banheiro ao mesmo tempo, o que é algo nojento
+        O problema aqui é que João e Maria estão entrando no banheiro ao mesmo tempo, o que é algo nojento.
+
+        Para resolver este problema, é precisa deixar os métodos sincronizados
      */
     public static void main(String[] args) {
         final Banheiro banheiro = new Banheiro();
 
         new Thread(banheiro::fazNumero1, "João").start();
         new Thread(banheiro::fazNumero2, "Maria").start();
-        new Thread(banheiro::fazNumero2, "Mário").start();
-        new Thread(banheiro::fazNumero1, "Marcelo").start();
-        new Thread(banheiro::fazNumero1, "Adriana").start();
+        new Thread(banheiro::limparBanheiro, "Limpeza").start();
+//        new Thread(banheiro::fazNumero2, "Mário").start();
+//        new Thread(banheiro::fazNumero1, "Marcelo").start();
+//        new Thread(banheiro::fazNumero1, "Adriana").start();
 
     }
 }
 
 class Banheiro {
+
+    private boolean isSujo = true;
 
     public void fazNumero1() {
 
@@ -27,6 +32,11 @@ class Banheiro {
 
         synchronized (this) {
             System.out.println(name + ": entrando no banheiro");
+
+            if (isSujo) {
+                esperaBanheiroSerLimpo(name);
+            }
+
             System.out.println(name + ": fazendo coisa rapida");
 
             try {
@@ -42,6 +52,16 @@ class Banheiro {
 
     }
 
+    private void esperaBanheiroSerLimpo(String name) {
+        System.out.println(name + ", eca!! Banheiro está sujo");
+        System.out.println(name + " saindo do banheiro...");
+        try {
+            this.wait();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void fazNumero2() {
 
         final String name = Thread.currentThread().getName();
@@ -51,6 +71,11 @@ class Banheiro {
         synchronized (this) {
 
             System.out.println(name + ": entrando no banheiro");
+
+            if (isSujo) {
+                esperaBanheiroSerLimpo(name);
+            }
+
             System.out.println(name + ": fazendo coisa demorada");
 
             try {
@@ -62,6 +87,39 @@ class Banheiro {
             System.out.println(name + ": dando descarga");
             System.out.println(name + ": lavando a mao");
             System.out.println(name + ": saindo do banheiro");
+        }
+
+    }
+
+    public void limparBanheiro() {
+
+        final String name = Thread.currentThread().getName();
+
+        System.out.println(name + " está batendo na porta no banheiro");
+
+        synchronized (this) {
+
+            System.out.println(name + ": entrando no banheiro");
+
+            if (!isSujo) {
+                System.out.println("banheiro já está limpo");
+                return;
+            }
+
+            System.out.println("limpando banheiro...");
+
+            this.isSujo = false;
+            try {
+                Thread.sleep(18000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            System.out.println(name + ": dando descarga");
+            System.out.println(name + ": lavando a mao");
+            System.out.println(name + ": saindo do banheiro");
+
+            notifyAll();
         }
 
     }
