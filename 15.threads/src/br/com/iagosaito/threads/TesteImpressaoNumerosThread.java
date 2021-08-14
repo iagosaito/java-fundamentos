@@ -5,7 +5,6 @@ public class TesteImpressaoNumerosThread {
 
         final int numeroFinal = 1000;
 
-
         /*
             A cada execução a ordem é alterada. Não é possível garantir a ordem de execução.
          */
