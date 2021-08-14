@@ -4,7 +4,6 @@ public class TesteSincronismoEntreThreads {
 
     /*
         O problema aqui é que João e Maria estão entrando no banheiro ao mesmo tempo, o que é algo nojento.
-
         Para resolver este problema, é precisa deixar os métodos sincronizados
      */
     public static void main(String[] args) {
@@ -12,11 +11,18 @@ public class TesteSincronismoEntreThreads {
 
         new Thread(banheiro::fazNumero1, "João").start();
         new Thread(banheiro::fazNumero2, "Maria").start();
-        new Thread(banheiro::limparBanheiro, "Limpeza").start();
-//        new Thread(banheiro::fazNumero2, "Mário").start();
-//        new Thread(banheiro::fazNumero1, "Marcelo").start();
-//        new Thread(banheiro::fazNumero1, "Adriana").start();
-
+        final Thread limpezaThread = new Thread(() -> {
+            while (true) {
+                banheiro.limparBanheiro();
+                try {
+                    Thread.sleep(15000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, "Limpeza");
+        limpezaThread.setDaemon(true);
+        limpezaThread.start();
     }
 }
 
@@ -33,17 +39,19 @@ class Banheiro {
         synchronized (this) {
             System.out.println(name + ": entrando no banheiro");
 
-            if (isSujo) {
+            while (isSujo) {
                 esperaBanheiroSerLimpo(name);
             }
 
             System.out.println(name + ": fazendo coisa rapida");
 
             try {
-                Thread.sleep(8000);
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
+            this.isSujo = true;
 
             System.out.println(name + ": dando descarga");
             System.out.println(name + ": lavando a mao");
@@ -72,17 +80,19 @@ class Banheiro {
 
             System.out.println(name + ": entrando no banheiro");
 
-            if (isSujo) {
+            while (isSujo) {
                 esperaBanheiroSerLimpo(name);
             }
 
             System.out.println(name + ": fazendo coisa demorada");
 
             try {
-                Thread.sleep(15000);
+                Thread.sleep(8000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
+            this.isSujo = true;
 
             System.out.println(name + ": dando descarga");
             System.out.println(name + ": lavando a mao");
@@ -110,7 +120,7 @@ class Banheiro {
 
             this.isSujo = false;
             try {
-                Thread.sleep(18000);
+                Thread.sleep(10000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
