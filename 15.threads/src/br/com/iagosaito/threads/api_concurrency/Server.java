@@ -3,7 +3,7 @@ package br.com.iagosaito.threads.api_concurrency;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Server {
+class Server {
     public static void main(String[] args) throws Exception {
 
         System.out.println("----- Iniciando servidor -------");
@@ -11,7 +11,7 @@ public class Server {
 
         while (true) {
             final Socket socket = serverSocket.accept();
-            System.out.println("Cliente conectado na porta: " + socket.getPort());
+            new Thread(new DelegadorDeTarefas(socket)).start();
         }
     }
 }
