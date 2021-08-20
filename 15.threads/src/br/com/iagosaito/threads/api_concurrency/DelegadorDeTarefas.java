@@ -22,7 +22,7 @@ class DelegadorDeTarefas implements Runnable {
                     System.out.println(scanner.nextLine());
                 }
             }
-            Thread.sleep(Duration.ofSeconds(20).toMillis());
+            Thread.sleep(Duration.ofSeconds(5).toMillis());
         } catch (Exception e) {
             e.printStackTrace();
         }
