@@ -1,5 +1,6 @@
 package br.com.iagosaito.threads.api_concurrency;
 
+import java.io.IOException;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
@@ -13,14 +14,50 @@ class Client {
 
         System.out.println("Conectando no servidor...");
 
-        final OutputStream outputStream = socket.getOutputStream();
-        outputStream.write("q1".getBytes(StandardCharsets.UTF_8));
+        final Thread transmissorDeMensagensThread = transmissorDeMensagens(socket);
+        final Thread recebedorMensagensThread = recebedorMensagens(socket);
 
-        Scanner scanner = new Scanner(System.in);
-        scanner.nextLine();
+        transmissorDeMensagensThread.start();
+        recebedorMensagensThread.start();
 
-        outputStream.close();
+        transmissorDeMensagensThread.join();
+
         socket.close();
-
     }
+
+    private static Thread transmissorDeMensagens(Socket socket) {
+        return new Thread(() -> {
+            try (OutputStream outputStream = socket.getOutputStream()) {
+                Scanner scanner = new Scanner(System.in);
+
+                while (scanner.hasNextLine()) {
+                    final String command = scanner.nextLine();
+
+                    if (command.equals("")) {
+                        break;
+                    }
+
+                    outputStream.write(command.getBytes(StandardCharsets.UTF_8));
+                    outputStream.write(System.lineSeparator().getBytes(StandardCharsets.UTF_8));
+                    outputStream.flush();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
+    private static Thread recebedorMensagens(Socket socket) {
+        return new Thread(() -> {
+            System.out.println("Recebendo respostas do Servidor...");
+            try (Scanner scannerServer = new Scanner(socket.getInputStream())) {
+                while (scannerServer.hasNextLine()) {
+                    System.out.println("Servidor: " + scannerServer.nextLine());
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
 }

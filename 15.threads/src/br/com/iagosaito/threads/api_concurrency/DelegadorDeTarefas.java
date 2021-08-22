@@ -17,7 +17,6 @@ class DelegadorDeTarefas implements Runnable {
         System.out.println("Cliente conectado na porta: " + socket.getPort());
         try {
             try (Scanner scanner = new Scanner(socket.getInputStream())) {
-
                 while (scanner.hasNextLine()) {
                     System.out.println(scanner.nextLine());
                 }

@@ -12,11 +12,10 @@ class Server {
         ServerSocket serverSocket = new ServerSocket(12345);
 
         final ExecutorService threadPool = Executors.newCachedThreadPool();
-
-        /*
-            final ExecutorService threadPool = Executors.newCachedThreadPool();
-            Quantidade fixa de Threads...
-         */
+    /*
+        final ExecutorService threadPool = Executors.newCachedThreadPool();
+        Quantidade fixa de Threads...
+     */
 
         while (true) {
             final Socket socket = serverSocket.accept();
