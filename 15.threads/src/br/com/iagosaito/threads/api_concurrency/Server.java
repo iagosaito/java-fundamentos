@@ -10,7 +10,7 @@ class Server {
 
     private final ServerSocket serverSocket;
     private final ExecutorService threadPool;
-    private boolean estaRodando;
+    private volatile boolean estaRodando;
 
     public Server() throws IOException {
         System.out.println("----- Iniciando servidor -------");
