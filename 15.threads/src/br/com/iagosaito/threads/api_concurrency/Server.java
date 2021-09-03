@@ -10,25 +10,26 @@ class Server {
 
     private final ServerSocket serverSocket;
     private final ExecutorService threadPool;
-    private boolean deveRodar;
+    private boolean estaRodando;
 
     public Server() throws IOException {
         System.out.println("----- Iniciando servidor -------");
         this.serverSocket = new ServerSocket(12345);
         this.threadPool = Executors.newCachedThreadPool();
-        this.deveRodar = true;
+        this.estaRodando = true;
     }
 
     public void executarServidor() throws IOException {
-        while (this.deveRodar) {
+        while (this.estaRodando) {
             System.out.println("Rodando...");
             final Socket socket = this.serverSocket.accept();
+            System.out.println("Socket: " + socket.toString());
             this.threadPool.execute(new DelegadorDeTarefas(socket, this));
         }
     }
 
     public void finalizarServer() throws IOException {
-        this.deveRodar = false;
+        this.estaRodando = false;
         this.serverSocket.close();
         this.threadPool.shutdown();
     }
