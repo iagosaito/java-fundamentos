@@ -6,7 +6,7 @@ class FabricaDeThreads implements ThreadFactory {
     @Override
     public Thread newThread(Runnable runnable) {
 
-        final Thread thread = new Thread();
+        final Thread thread = new Thread(runnable);
         thread.setUncaughtExceptionHandler((thread1, throwable) -> {
             System.out.println("Erro tratado: " + throwable.getMessage());
         });
