@@ -15,7 +15,7 @@ class Server {
     public Server() throws IOException {
         System.out.println("----- Iniciando servidor -------");
         this.serverSocket = new ServerSocket(12345);
-        this.threadPool = Executors.newCachedThreadPool();
+        this.threadPool = Executors.newCachedThreadPool(new FabricaDeThreads());
         this.estaRodando = true;
     }
 
@@ -24,7 +24,7 @@ class Server {
             System.out.println("Rodando...");
             final Socket socket = this.serverSocket.accept();
             System.out.println("Socket: " + socket.toString());
-            this.threadPool.execute(new DelegadorDeTarefas(socket, this));
+            this.threadPool.execute(new DelegadorDeTarefas(threadPool, socket, this));
         }
     }
 
