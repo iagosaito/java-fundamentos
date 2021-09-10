@@ -3,6 +3,7 @@ package br.com.iagosaito.threads.api_concurrency;
 import java.util.concurrent.ThreadFactory;
 
 class FabricaDeThreads implements ThreadFactory {
+
     @Override
     public Thread newThread(Runnable runnable) {
 
@@ -13,4 +14,5 @@ class FabricaDeThreads implements ThreadFactory {
 
         return thread;
     }
+
 }
