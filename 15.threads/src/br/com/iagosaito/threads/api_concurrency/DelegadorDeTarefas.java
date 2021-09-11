@@ -32,7 +32,7 @@ class DelegadorDeTarefas implements Runnable {
                             break;
                         case "c2":
                             System.out.println("Enviando comando c2");
-                            threadPool.execute(new ComandoC2());
+                            threadPool.execute(new ComandoC2(threadPool, socket));
                             break;
                         case "fim":
                             System.out.println("Encerrando servidor");
